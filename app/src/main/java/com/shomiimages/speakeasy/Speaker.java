@@ -3,8 +3,6 @@ package com.shomiimages.speakeasy;
 /**
  * Created by Justin Dean Chien on 3/2/2016.
  */
-public class Cat {
-    public String speak(){
-        return "meow";
-    }
+public interface Speaker {
+    public String speak();
 }
