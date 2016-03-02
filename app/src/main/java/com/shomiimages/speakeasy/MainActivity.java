@@ -18,7 +18,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Speaker[] speakers = {new Human(), new Dog(), new Cat()};
+        Speaker thing = new Speaker() {
+            @Override
+            public String speak() {
+                return "I'm anonymous";
+            }
+        };
+
+        Speaker[] speakers = {new Human(), new Dog(), new Cat(), thing};
         saySomething(speakers);
     }
 
